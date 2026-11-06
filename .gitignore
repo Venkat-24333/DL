@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local cache directories
+.keras/
+.mpl_cache/
+
+# Streamlit local credentials
+.streamlit/credentials.toml
+
+# OS generated files
+.DS_Store
+Thumbs.db

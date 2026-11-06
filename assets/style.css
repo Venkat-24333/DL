@@ -1,0 +1,241 @@
+/* Formula 1 Lap Time Prediction System - Custom F1 Theme */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+    --f1-red: #E10600;
+    --f1-dark-red: #9B0400;
+    --f1-black: #0E1117;
+    --f1-card-bg: #161A23;
+    --f1-card-border: #2A303F;
+    --f1-card-hover: #212634;
+    --f1-silver: #E0E4EC;
+    --f1-muted: #8F9CAE;
+    --f1-gold: #FFB800;
+    --f1-green: #00D26A;
+    --f1-font: 'Titillium Web', -apple-system, BlinkMacSystemFont, sans-serif;
+    --f1-mono: 'JetBrains Mono', monospace;
+}
+
+/* Base App Styling */
+html, body, [class*="css"] {
+    font-family: var(--f1-font);
+    color: var(--f1-silver);
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background-color: #0A0D13 !important;
+    border-right: 1px solid #1E2330 !important;
+}
+
+section[data-testid="stSidebar"] h1, 
+section[data-testid="stSidebar"] h2, 
+section[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Header & Hero Banner */
+.f1-hero {
+    background: linear-gradient(135deg, #141824 0%, #1C2233 60%, #2A151B 100%);
+    border-left: 5px solid var(--f1-red);
+    border-radius: 12px;
+    padding: 24px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.f1-hero::after {
+    content: "F1";
+    position: absolute;
+    right: 20px;
+    bottom: -15px;
+    font-size: 110px;
+    font-weight: 900;
+    color: rgba(225, 6, 0, 0.06);
+    font-style: italic;
+    pointer-events: none;
+}
+
+.f1-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.f1-title span {
+    color: var(--f1-red);
+}
+
+.f1-subtitle {
+    font-size: 1.05rem;
+    color: var(--f1-muted);
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+/* Dashboard Metric Cards */
+.f1-metric-card {
+    background: var(--f1-card-bg);
+    border: 1px solid var(--f1-card-border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    height: 100%;
+}
+
+.f1-metric-card:hover {
+    border-color: var(--f1-red);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(225, 6, 0, 0.15);
+}
+
+.f1-metric-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--f1-muted);
+    margin-bottom: 4px;
+}
+
+.f1-metric-value {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    font-family: var(--f1-font);
+}
+
+.f1-metric-delta {
+    font-size: 0.8rem;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.delta-pos {
+    color: var(--f1-green);
+}
+
+.delta-neg {
+    color: var(--f1-red);
+}
+
+/* Badges */
+.f1-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge-ready {
+    background-color: rgba(0, 210, 106, 0.15);
+    color: var(--f1-green);
+    border: 1px solid rgba(0, 210, 106, 0.3);
+}
+
+.badge-warning {
+    background-color: rgba(255, 184, 0, 0.15);
+    color: var(--f1-gold);
+    border: 1px solid rgba(255, 184, 0, 0.3);
+}
+
+.badge-red {
+    background-color: rgba(225, 6, 0, 0.15);
+    color: #FF5A55;
+    border: 1px solid rgba(225, 6, 0, 0.3);
+}
+
+/* Lap Time Display Box */
+.f1-lap-display {
+    background: linear-gradient(135deg, #181D29 0%, #11141C 100%);
+    border: 2px solid var(--f1-red);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(225, 6, 0, 0.2);
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.f1-lap-time-large {
+    font-family: var(--f1-mono);
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+    margin: 10px 0;
+}
+
+.f1-lap-label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--f1-muted);
+}
+
+/* Custom Buttons */
+.stButton>button {
+    background-color: var(--f1-red) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    padding: 10px 24px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 14px rgba(225, 6, 0, 0.35) !important;
+}
+
+.stButton>button:hover {
+    background-color: #B80500 !important;
+    box-shadow: 0 6px 20px rgba(225, 6, 0, 0.5) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Tab Styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    border-bottom: 2px solid #232838;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: var(--f1-muted) !important;
+    font-weight: 600 !important;
+    border-radius: 6px 6px 0 0 !important;
+    padding: 10px 20px !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #FFFFFF !important;
+    border-bottom: 3px solid var(--f1-red) !important;
+}
+
+/* Code and Mono Blocks */
+code {
+    font-family: var(--f1-mono) !important;
+    background-color: #1A1F2B !important;
+    color: #FF5A55 !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+}
+
+/* Table Enhancements */
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--f1-card-border);
+    border-radius: 8px;
+    overflow: hidden;
+}

@@ -1,0 +1,15 @@
+{
+  "mae_ms": 2281.44,
+  "mse_ms": 30645818.0,
+  "rmse_ms": 5535.87,
+  "mae_sec": 2.281,
+  "rmse_sec": 5.536,
+  "r2_score": 0.8075,
+  "mean_actual_sec": 90.624,
+  "mean_absolute_percentage_error": 2.52,
+  "residuals_mean_ms": -125.38,
+  "residuals_std_ms": 5534.45,
+  "total_test_samples": 23861,
+  "formatted_mae": "2.281 s (2281.4 ms)",
+  "formatted_rmse": "5.536 s (5535.9 ms)"
+}
